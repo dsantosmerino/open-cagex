@@ -11,7 +11,7 @@ defmodule OpenCagex.Mixfile do
      description: description(),
      name: "OpenCagex",
      package: package(),
-     source_url: "https://github.com/dsantosmerino/open_cagex"]
+     source_url: "https://github.com/dsantosmerino/open-cagex"]
   end
 
   # Configuration for the OTP application
@@ -54,7 +54,7 @@ defmodule OpenCagex.Mixfile do
     [
       maintainers: ["David Santos Merino"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/dsantosmerino/open_cagex"}
+      links: %{"GitHub" => "https://github.com/dsantosmerino/open-cagex"}
     ]
   end
 end
