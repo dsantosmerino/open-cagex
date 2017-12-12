@@ -19,7 +19,7 @@ defmodule OpenCagexTest do
 
   describe "when given a place name" do
     test "returns a geocode" do
-      expected_result = {:ok, %{"lat" => 41.3778504, "lng" => 2.1778608}}
+      expected_result = {:ok, %{"lat" => 41.377655, "lng" => 2.1780917}}
       assert expected_result == OpenCagex.geocode("Passatge de la Pau, Barcelona")
     end
   end
