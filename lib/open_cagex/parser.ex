@@ -11,7 +11,7 @@ defmodule OpenCagex.Parser do
     value = results
     |> parse_results
     |> first_result
-    |> Map.get(key)
+    |> get_key(key)
 
     {:ok, value}
   end
@@ -19,4 +19,7 @@ defmodule OpenCagex.Parser do
   defp parse_results(%{"results" => results}), do: results
 
   defp first_result(results), do: Enum.at(results, 0)
+
+  defp get_key(nil, key), do: nil
+  defp get_key(results, key), do: Map.get(results, key)
 end
