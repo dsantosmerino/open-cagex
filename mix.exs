@@ -2,16 +2,18 @@ defmodule OpenCagex.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :open_cagex,
-     version: "0.1.2",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps(),
-     description: description(),
-     name: "OpenCagex",
-     package: package(),
-     source_url: "https://github.com/dsantosmerino/open-cagex"]
+    [
+      app: :open_cagex,
+      version: "0.1.2",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps(),
+      description: description(),
+      name: "OpenCagex",
+      package: package(),
+      source_url: "https://github.com/dsantosmerino/open-cagex"
+    ]
   end
 
   # Configuration for the OTP application
@@ -22,8 +24,8 @@ defmodule OpenCagex.Mixfile do
     [
       extra_applications: [:httpoison],
       env: [
-          api_key: nil,
-          api_url: "http://api.opencagedata.com/geocode/v1/",
+        api_key: nil,
+        api_url: "http://api.opencagedata.com/geocode/v1/"
       ]
     ]
   end
@@ -39,11 +41,11 @@ defmodule OpenCagex.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.11"},
+      {:httpoison, "~> 0.11 or ~> 1.0"},
       {:poison, "~> 3.1"},
       {:credo, "~> 0.3", only: [:dev, :test]},
       {:ex_doc, "~> 0.14", only: :dev, runtime: false},
-      {:mock, "~> 0.3.1", only: :test},
+      {:mock, "~> 0.3.1", only: :test}
     ]
   end
 
