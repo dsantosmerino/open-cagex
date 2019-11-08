@@ -41,7 +41,7 @@ defmodule OpenCagex.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.11 or ~> 1.0"},
+      {:httpoison, "~> 1.5"},
       {:poison, "~> 3.1"},
       {:credo, "~> 0.3", only: [:dev, :test]},
       {:ex_doc, "~> 0.14", only: :dev, runtime: false},
