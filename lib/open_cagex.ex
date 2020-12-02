@@ -29,6 +29,16 @@ defmodule OpenCagex do
   end
 
   @doc """
+  Returns details from opencagedata request for the given place name
+  """
+  def detail(place_name) do
+    case Api.get_by_place_name(place_name) do
+      {:ok, response} -> Parser.detail(response)
+      {:error, error} -> {:error, error}
+    end
+  end
+
+  @doc """
   Sets an API key
   """
   def set_api_key(api_key) do
