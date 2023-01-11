@@ -1,5 +1,5 @@
 # OpenCagex
-[![Build Status](https://travis-ci.org/dsantosmerino/open-cagex.svg?branch=master)](https://travis-ci.org/dsantosmerino/open-cagex)
+[![CI status](https://github.com/dsantosmerino/open-cagex/actions/workflows/ci.yml/badge.svg)](https://github.com/dsantosmerino/open-cagex/actions/workflows/ci.yml)
 [![Hex Version](https://img.shields.io/hexpm/v/open_cagex.svg)](https://hex.pm/packages/open_cagex)
 
 An OpenCage Geocoder API wrapper written in Elixir
