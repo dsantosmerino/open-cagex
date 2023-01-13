@@ -43,7 +43,7 @@ defmodule OpenCagex.Mixfile do
     [
       {:httpoison, "~> 1.5"},
       {:poison, "~> 5.0"},
-      {:credo, "~> 0.3", only: [:dev, :test]},
+      {:credo, "~> 1.6", only: [:dev, :test]},
       {:ex_doc, "~> 0.14", only: :dev, runtime: false},
       {:mock, "~> 0.3.1", only: :test}
     ]
